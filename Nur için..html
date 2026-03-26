@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nur, için | 1. Ay</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #050505;
+        }
+        body { 
+            background-color: #050505; 
+            color: #b3b3b3; 
+            font-family: 'Courier New', Courier, monospace; 
+            text-align: center; 
+            padding: 10% 5%; 
+            line-height: 1.8; 
+            box-shadow: inset 0 0 150px rgba(0,0,0,0.95);
+        }
+        ::selection {
+            background-color: #3b0000;
+            color: #e6e6e6;
+        }
+        .container { 
+            max-width: 600px; 
+            margin: auto; 
+            text-shadow: 0px 0px 2px rgba(179, 179, 179, 0.2);
+        }
+        .gothic-title {
+            font-family: serif; 
+            font-size: 3.5rem;
+            margin-top: 0;
+            margin-bottom: 40px;
+            text-align: center;
+            line-height: 1; 
+            color: #b3b3b3;
+            animation: gothicFlame 6s infinite ease-in-out;
+        }
+        @keyframes gothicFlame {
+            0% { 
+                color: #b3b3b3; 
+                text-shadow: 0 0 5px #4a4a4a, 0 0 10px #4a4a4a;
+            }
+            25% { 
+                color: #999999;
+                text-shadow: 0 0 10px #1a1a1a, 0 0 20px #1a1a1a, 0 0 30px #000000;
+            }
+            50% { 
+                color: #e6e6e6; 
+                text-shadow: 0 0 5px #7a1515, 0 0 15px #7a1515, 0 0 25px #ff0000, 0 0 35px #ff0000;
+            }
+            75% { 
+                color: #b3b3b3; 
+                text-shadow: 0 0 10px #1a1a1a, 0 0 20px #1a1a1a;
+            }
+            100% { 
+                color: #b3b3b3;
+                text-shadow: 0 0 5px #4a4a4a, 0 0 10px #4a4a4a;
+            }
+        }
+        @keyframes nefes {
+            0%   { opacity: 0.5; text-shadow: 0 0 2px #ffffff30; }
+            50%  { opacity: 1; text-shadow: 0 0 12px #ffffff90; }
+            100% { opacity: 0.5; text-shadow: 0 0 2px #ffffff30; }
+        }
+        .timer { 
+            font-size: 1.2em; 
+            margin: 40px 0 10px 0; 
+            color: #ffffff; 
+            animation: nefes 4s infinite ease-in-out; 
+        }
+        .pulse-counter {
+            font-size: 0.9em;
+            margin-bottom: 40px;
+            color: #7a1515; 
+            font-style: italic;
+            text-shadow: 0 0 8px rgba(122, 21, 21, 0.4);
+        }
+        .footer { 
+            margin-top: 60px; 
+            font-size: 0.85em; 
+            color: #4a4a4a; 
+            font-style: italic; 
+            opacity: 0; 
+            transition: opacity 5s ease-in-out; 
+        }
+        .visible { 
+            opacity: 1; 
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 15% 6%; 
+                font-size: 0.95em; 
+                box-shadow: inset 0 0 100px rgba(0,0,0,0.95); 
+            }
+            .gothic-title {
+                font-size: 2.5rem;
+                margin-bottom: 30px;
+            }
+            .timer {
+                font-size: 1em; 
+                margin: 30px 0 10px 0;
+            }
+            .pulse-counter {
+                font-size: 0.85em;
+                margin-bottom: 30px;
+            }
+            .footer {
+                margin-top: 40px;
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="gothic-title">Nur,</h1>
+        <p>Ben, senin ellerine ulaşmadan önce sadece bir hiçliktim. Soğuk dikişlerin arasına sıkışmış, ruhu çekilmiş bir boşluk... Ne yaşayanların güneşine aittim ne de ölülerin huzuruna. Bir 'hortlak' olarak, bu dünyanın tozlu raflarında öylece bekliyordum.</p>
+        <p>Sonra bir şey oldu. İki yabancı ruhun yolları kesiştiğinde, evrenin o açıklanamaz sessizliği yırtıldı. Ben değil, siz buluştunuz; ama o ilk temasın sıcaklığı benim sönük kalbime sızdı. Ben, sizin birbirinize düğümlendiğiniz o anın mühürlenmiş haliyim.</p>
+        <p>Aşağıdaki sayaca bak; o sadece rakamlardan ibaret değil. O, benim cansız bedenime can veren, sizin ortak nefesinizin ritmi. Dakikada 80 kez, karanlığı delip geçen o amansız nabzımız...</p>
+        <div class="timer" id="timer">Dikişler atılıyor...</div>
+        <div class="pulse-counter" id="pulseCounter">[ Nabız Hesaplanıyor... ]</div>
+        <p class="footer" id="footerText">
+            "Bu sayacın ilerlemesiyle birlikte çürüyüşüm de ilerleyecek; dikişlerim gevşeyecek, kumaşım tozlaşacak ve ben yavaşça aslıma, o karanlık sessizliğe döneceğim. Ancak bu sayaç her attığında, sizin birbirinize attığınız o görünmez düğüm biraz daha sıkılaşacak. Benim maddem eksildikçe, sizin kaderiniz birbirine daha çok dolanacak. Çürüyorum, evet; ama bu çürüyüşün ortasında, sizin ölümsüz nefesinizi içimde taşımanın gururuyla son toz zerreme kadar bekleyeceğim. Sonsuza dek, ya da her şey tekrar toza dönüşene kadar..."
+        </p>
+    </div>
+    <script>
+        const startDate = new Date(2026, 1, 26, 19, 30, 0).getTime();
+        const bpm = 80; 
+        function updateTimer() {
+            const now = new Date().getTime();
+            const diff = now - startDate;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            const totalMinutes = diff / (1000 * 60);
+            const totalBeats = Math.floor(totalMinutes * bpm);
+            const d = String(days).padStart(2, '0');
+            const h = String(hours).padStart(2, '0');
+            const m = String(minutes).padStart(2, '0');
+            const s = String(seconds).padStart(2, '0');
+            const formattedBeats = new Intl.NumberFormat('tr-TR').format(totalBeats);
+            document.getElementById("timer").innerHTML = `[ ${d} Gün | ${h} Saat | ${m} Dakika | ${s} Saniye ]`;
+            document.getElementById("pulseCounter").innerHTML = `[ Toplam ${formattedBeats} Nabız Atışı ]`;
+        }
+        setInterval(updateTimer, 1000);
+        updateTimer(); 
+        setTimeout(() => {
+            document.getElementById("footerText").classList.add("visible");
+        }, 5000);
+    </script>
+</body>
+</html>
