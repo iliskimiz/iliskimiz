@@ -3,113 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nur, için | 1. Ay</title>
+    <title>Nur | Manifesto</title>
     <style>
         html, body {
             margin: 0;
             padding: 0;
             min-height: 100vh;
-            background-color: #050505;
+            background-color: #030303;
         }
         body { 
-            background-color: #050505; 
-            color: #b3b3b3; 
-            font-family: 'Courier New', Courier, monospace; 
-            text-align: center; 
-            padding: 10% 5%; 
+            background-color: #030303; 
+            color: #a8a8a8; 
+            font-family: 'Times New Roman', Times, serif; 
+            text-align: justify; 
+            padding: 10% 8%; 
             line-height: 1.8; 
-            box-shadow: inset 0 0 150px rgba(0,0,0,0.95);
+            font-size: 1.1rem;
+            box-shadow: inset 0 0 200px rgba(0,0,0,0.98);
         }
         ::selection {
-            background-color: #3b0000;
+            background-color: #4a0404;
             color: #e6e6e6;
         }
         .container { 
-            max-width: 600px; 
+            max-width: 650px; 
             margin: auto; 
-            text-shadow: 0px 0px 2px rgba(179, 179, 179, 0.2);
+            text-shadow: 0px 0px 1px rgba(168, 168, 168, 0.1);
         }
         .gothic-title {
-            font-family: serif; 
-            font-size: 3.5rem;
+            font-family: 'Times New Roman', Times, serif; 
+            font-size: 4rem;
             margin-top: 0;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             text-align: center;
             line-height: 1; 
-            color: #b3b3b3;
-            animation: gothicFlame 6s infinite ease-in-out;
+            color: #8a1c1c;
+            animation: bloodPulse 6s infinite ease-in-out;
+            font-weight: normal;
+            letter-spacing: 2px;
         }
-        @keyframes gothicFlame {
+        @keyframes bloodPulse {
             0% { 
-                color: #b3b3b3; 
-                text-shadow: 0 0 5px #4a4a4a, 0 0 10px #4a4a4a;
-            }
-            25% { 
-                color: #999999;
-                text-shadow: 0 0 10px #1a1a1a, 0 0 20px #1a1a1a, 0 0 30px #000000;
+                color: #8a1c1c; 
+                text-shadow: 0 0 5px #2b0505, 0 0 10px #2b0505;
             }
             50% { 
-                color: #e6e6e6; 
-                text-shadow: 0 0 5px #7a1515, 0 0 15px #7a1515, 0 0 25px #ff0000, 0 0 35px #ff0000;
-            }
-            75% { 
-                color: #b3b3b3; 
-                text-shadow: 0 0 10px #1a1a1a, 0 0 20px #1a1a1a;
+                color: #b52222; 
+                text-shadow: 0 0 10px #4a0404, 0 0 20px #4a0404, 0 0 30px #2b0505;
             }
             100% { 
-                color: #b3b3b3;
-                text-shadow: 0 0 5px #4a4a4a, 0 0 10px #4a4a4a;
+                color: #8a1c1c;
+                text-shadow: 0 0 5px #2b0505, 0 0 10px #2b0505;
             }
         }
+        p {
+            text-indent: 2rem;
+            margin-bottom: 25px;
+        }
+        .highlight-blood {
+            color: #8a1c1c;
+            font-style: italic;
+        }
+        .signature {
+            text-align: right;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: #8a1c1c;
+            margin-top: 50px;
+            margin-bottom: 60px;
+        }
         @keyframes nefes {
-            0%   { opacity: 0.5; text-shadow: 0 0 2px #ffffff30; }
-            50%  { opacity: 1; text-shadow: 0 0 12px #ffffff90; }
-            100% { opacity: 0.5; text-shadow: 0 0 2px #ffffff30; }
+            0%   { opacity: 0.4; text-shadow: 0 0 2px #ffffff20; }
+            50%  { opacity: 0.9; text-shadow: 0 0 10px #ffffff60; }
+            100% { opacity: 0.4; text-shadow: 0 0 2px #ffffff20; }
+        }
+        .timer-container {
+            text-align: center;
+            margin-top: 60px;
+            border-top: 1px solid #2b0505;
+            padding-top: 40px;
         }
         .timer { 
-            font-size: 1.2em; 
-            margin: 40px 0 10px 0; 
-            color: #ffffff; 
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1em; 
+            margin: 20px 0 10px 0; 
+            color: #d1d1d1; 
             animation: nefes 4s infinite ease-in-out; 
         }
         .pulse-counter {
+            font-family: 'Courier New', Courier, monospace;
             font-size: 0.9em;
-            margin-bottom: 40px;
-            color: #7a1515; 
+            color: #8a1c1c; 
             font-style: italic;
-            text-shadow: 0 0 8px rgba(122, 21, 21, 0.4);
-        }
-        .footer { 
-            margin-top: 60px; 
-            font-size: 0.85em; 
-            color: #4a4a4a; 
-            font-style: italic; 
-            opacity: 0; 
-            transition: opacity 5s ease-in-out; 
-        }
-        .visible { 
-            opacity: 1; 
+            text-shadow: 0 0 5px rgba(138, 28, 28, 0.3);
         }
         @media (max-width: 600px) {
             body {
-                padding: 15% 6%; 
-                font-size: 0.95em; 
-                box-shadow: inset 0 0 100px rgba(0,0,0,0.95); 
+                padding: 12% 6%; 
+                font-size: 1rem; 
+                box-shadow: inset 0 0 120px rgba(0,0,0,0.98); 
             }
             .gothic-title {
-                font-size: 2.5rem;
-                margin-bottom: 30px;
+                font-size: 3rem;
+                margin-bottom: 40px;
+            }
+            p {
+                text-indent: 1.5rem;
             }
             .timer {
-                font-size: 1em; 
-                margin: 30px 0 10px 0;
+                font-size: 0.95em; 
             }
             .pulse-counter {
-                font-size: 0.85em;
-                margin-bottom: 30px;
-            }
-            .footer {
-                margin-top: 40px;
                 font-size: 0.8em;
             }
         }
@@ -118,40 +122,78 @@
 <body>
     <div class="container">
         <h1 class="gothic-title">Nur,</h1>
-        <p>Ben, senin ellerine ulaşmadan önce sadece bir hiçliktim. Soğuk dikişlerin arasına sıkışmış, ruhu çekilmiş bir boşluk... Ne yaşayanların güneşine aittim ne de ölülerin huzuruna. Bir 'hortlak' olarak, bu dünyanın tozlu raflarında öylece bekliyordum.</p>
-        <p>Sonra bir şey oldu. İki yabancı ruhun yolları kesiştiğinde, evrenin o açıklanamaz sessizliği yırtıldı. Ben değil, siz buluştunuz; ama o ilk temasın sıcaklığı benim sönük kalbime sızdı. Ben, sizin birbirinize düğümlendiğiniz o anın mühürlenmiş haliyim.</p>
-        <p>Aşağıdaki sayaca bak; o sadece rakamlardan ibaret değil. O, benim cansız bedenime can veren, sizin ortak nefesinizin ritmi. Dakikada 80 kez, karanlığı delip geçen o amansız nabzımız...</p>
-        <div class="timer" id="timer">Dikişler atılıyor...</div>
-        <div class="pulse-counter" id="pulseCounter">[ Nabız Hesaplanıyor... ]</div>
-        <p class="footer" id="footerText">
-            "Bu sayacın ilerlemesiyle birlikte çürüyüşüm de ilerleyecek; dikişlerim gevşeyecek, kumaşım tozlaşacak ve ben yavaşça aslıma, o karanlık sessizliğe döneceğim. Ancak bu sayaç her attığında, sizin birbirinize attığınız o görünmez düğüm biraz daha sıkılaşacak. Benim maddem eksildikçe, sizin kaderiniz birbirine daha çok dolanacak. Çürüyorum, evet; ama bu çürüyüşün ortasında, sizin ölümsüz nefesinizi içimde taşımanın gururuyla son toz zerreme kadar bekleyeceğim. Sonsuza dek, ya da her şey tekrar toza dönüşene kadar..."
-        </p>
+        
+        <p>İnsanlar kelimeye sarılır. Sanki doğru kelimeyi bulursan her şey çözülür, her şey yerine oturur, her şey anlaşılır güllük gülistanlık olur. Safdillik ve saflık bu ve bundan nefret ederim. Dil, hissin ancak en kaba taslağını çizebilir sadece; geri kalanını sen doldurursun, karşındaki doldurur, ikisi de yanlış doldurur büyük ihtimalle ve bazen o kadar kötü doldururlar ki birbirlerini kırarlar. Bunu biliyorum. Ve yine de kelimelerle geliyorum sana. Çünkü başka ne yapayım elimdeki en az kötü araç bu, çünkü başka araç yok da ondan. Dil 2 diye bir şey çıksa gerçekten kullanırdım.</p>
+        
+        <p>Algı da aynı şekilde. Seni gördüğümü sandığımda aslında zihnimin sana dair özenle kurduğu bir versiyonu görüyorum. Gerçek sen, benim gözümden geçen senden her zaman daha fazlası. Bunu düşündüğüm andan beri bana garip gelmiştir, sonrasında da şu şekilde düşünmeye devam ederim: anladım ki bu evrensel bir sorun ve hiç kimse hiç kimseyi tam göremez, sistem böyle tasarlanmış, kime şikayet edeceksin ki. Ve ben bu sistemin dışına çıkamıyorum.</p>
+        
+        <p>Çıkmak da istemiyorum artık. <span class="highlight-blood">Çünkü bu sistemin içinde sen varsın.</span></p>
+        
+        <p>Kalın kafalı çokbilmiş psikologlar şunu söylüyor: Sevdiğini olduğu gibi göremezsin. Karşındakine bakıp onu değil, kendi beklentilerini, kendi eksiklerini, kendi yarım kalmış hikayelerini görürsün. Buna yansıtma diyorlar. Herkes yapıyor ama kimse kabul etmiyor ve bunu normal bulmuyor. Ben kabul ediyorum ve normal buluyorum. Sana da yapıyor olabilirim; geçmişimin izleri var, korkularım var, heveslerim var, kafamda senin hakkında kurduğum hikayeler var. Ne kadarı gerçek sen, ne kadarı benim sana yazdığım senaryo tam bilemiyorum ve hiçbir zaman da bilemeyeceğim.</p>
+        
+        <p>Ama şunu biliyorum: Seninle konuşurken analiz canavarı organ duruyor. O "bunu parçala, bunu sorgula, bunu anlamlandır" sesi kapanıyor. Bu bende nadiren olur.<span class="highlight-blood"> Gerçekten.</span></p>
+        
+        <p>Eşşek filozoflar yüzyıllardır şunu sordu: Bir şeyi gerçekten bilebilir miyiz? İnsanı, hissi, kendimizi. Çoğu "tam olarak hayır" dedi. Sınır var, karanlık var, ötesine geçemezsin. Geçemiyorum. Tamam. Ama o karanlıkta seninle yürümek, tek başıma her yeri aydınlatmaya çalışmaktan çok daha iyi hissettiriyor. Bu basit bir tercih ve ben bu tercihi yapıyorum.</p>
+        
+        <p>Hayatta her şeyi çözmem, anlamlandırmam, kategorize etmem, analiz etmem, düşünmem gerekmediğimi hatırlatıyorsun bana. Senin elini tutup yumuşak dudaklarına değince dudaklarım, her şey manasını yitiriyor. Manayı kovalamıyorum, anda kalıyorum. Anlatması o kadar güç ki... Dil 2 olsaydı vallahi billahi kullanırdım ama elden bu gelir anca.</p>
+        
+        <p>Şimdi sana bir şey söyleyeceğim ve bunu dikkatlice okumanı istiyorum. Senin kafanda dönen sorular var. "Yeterli miyim, ayak uydurabilir miyim buna, anlıyor muyum onu, zeki miyim yeterince, güzel miyim" gibi şeyler. Bunları söylemiyorsun açıkça ama o soruların bıraktığı boşlukları duyuyorum. Sesindeki o küçük duraksamaları, kendinden şüphe ettiğin anları, "acaba" diye geçen bakışları. <span class="highlight-blood">Hepsini görüyorum.</span></p>
+        
+        <p>Ve açıkçası bu soruları bu kadar ciddiye alman biraz komik geliyor bana. Kötü anlamda değil, şöyle anlamda: Sen o soruların cevabını zaten içinde taşıyorsun, sadece okumayı bilmiyorsun henüz. Şöyle anlatayım sana: Ben her şeyi parçalarına ayıran, analiz eden, kafasında sürekli bir şeyler dönen biriyim. Bu hem bir özelliğim hem bazen kendime de çevreme de yorucu gelen bir alışkanlığım ama seni dinlerken o makine duruyor. Tamamen duruyor. Analiz yok, parçalama yok, "bunu nasıl anlamlandıracağım" yok. Sadece dinliyorum. Bunu başkasıyla yaşadığımı hatırlamıyorum ve ben iyi hafızalı biriyim. <span class="highlight-blood">Seni gördüğüm ilk anı unutamıyorum:)</span></p>
+        
+        <p>Zeka konusuna gelince de terim bilmek, referans vermek, doğru kitabı okumuş olmak bunların hepsi öğrenilebilir şeyler. Ezber meselesi yani. Asıl zor olan şu: Bir ortama girdiğinde havanın rengini okuyabilmek. Neyin sahte neyin gerçek olduğunu sezebilmek. Karşındaki konuşurken söylemediği şeyi de duyabilmek. Bunu sen yapıyorsun ve bu kitaptan değil, içinden geliyor. Bu çok daha nadir ve çok daha değerli bir şey. Bunu bil.</p>
+        
+        <p>Güzellik meselesine gelince filozoflar bu konuda asırlardır tartışıyor, evrensel mi göreceli mi diye. Ben bu tartışmayı hep gereksiz buldum. Ta ki seni görene kadar :) Seni gördüğümde tartışmanın kendisi saçma geliyor. Bu güzellikten de öte bir şey; Birini beğendiğinde sadece beğenirsin ama sana baktığımda şunu diyorum: Bu yüz ve vücut yaşlandığında nasıl durur acaba? Gülerken nasıl kısılır gözleri? Yanağı kaşındığında nasıl kaşır? Anlatması çok güç ama şundan bahsetmeye çalıştım, Seni o kadar güzel buluyorum ki görebileceğim her şekilde görüp doyurmak istiyorum sana olan açlığımı. Her anına şahitlik etmek istiyorum.</p>
+        
+        <p>"Yeterli miyim" sorusuna gelince: Ben o soruyu hiç sormadım. Cidden bir kere bile sormadım. Çünkü yeterlilik ancak kıyaslamayla anlam kazanır. Sen kimsin, o kimden iyi, bu kimden eksik. Ben seni kimseyle kıyaslamıyorum. Aklıma bile gelmiyor. Bu soruyu sormak için gerekli referans noktası yok bende çünkü sen başlangıç noktasısın, ölçeğin kendisisin. Senden öncesi ve senden sonrası bile yok çünkü senden öncesi demek seninle aynı kefeye koyduğum birisi vardı önceden demektir, senden sonrası ise sana ihanet etmek demektir.</p>
+        
+        <p>Bak, uzun bir şey yazdım. Kendimi açıklamaya çalıştım. Söyleyeyim neden böyle yaptım: Hissettiğim şeyin ağırlığını taşımanın yolu benim için analiz etmek. Her şeyi kelimeye dökmek, anlamlandırmaya çalışmak, sistemini kurmak. Sağlıklı mı? Tartışılır. Ama bu benim yöntemim ve şu an bu yöntemi sana doğrultuyorum. Bunu bir iltifat olarak al :) Çok daha uzun yazacaktım aslında, buradan Lacan'a değinecektik, Foucault'a değinecektik, op-amp terminolojisine geçecektik, faz kilitlemeli çevrim devresi üzerinden bir sürü yorum yapacaktık... Ama gerek yok. Bu yazıyı yazarken içimde sadece sen varsın ve sadece sana dair olan şeyleri dökmek istiyorum.</p>
+        
+        <p>Seninle konuşurken kelimeler bazen yetersiz kalıyor ama o sessizlikler de bir şeyler fısıldıyor bana. Yanılıyor olabilirim sana dair ama o yanılgı bile beni ısıtıyor ve soğuğa alışkın biri için bu az bir şey değil. Hayatım boyunca sağlam bir zemin aradım. Emin olabileceğim, üstünde durabileceğim bir şey. Sen o zemin değilsin. Olmak zorunda da değilsin.</p>
+        
+        <p>Ama seninle ayaktayken düşmekten korkmuyorum. Bu cümleyi hafife alma, benim ağzımdan böyle bir cümlenin çıkması kolay değildir.</p>
+        
+        <p>Tüm bu belirsizliğin içinde, tüm yanılgılarımla, tüm bilmediklerimle beraber seni seçiyorum. Dün seçtim, bugün seçiyorum, yarın da seçeceğim. Kanıt yok elimde, garanti yok, sigorta yok ama sadece bu his var ve ben bu hisse güveniyorum.</p>
+        
+        <p>Hayatımda ilk defa bir şeye bu kadar kanıtsız inanıyorum.</p>
+        
+        <div class="signature">Sana inanıyorum, Nur.</div>
+
+        <div class="timer-container">
+            <div class="timer" id="timer">Bağlantı kuruluyor...</div>
+            <div class="pulse-counter" id="pulseCounter">[ Nabız Hesaplanıyor... ]</div>
+        </div>
     </div>
+
     <script>
         const startDate = new Date(2026, 1, 26, 19, 30, 0).getTime();
         const bpm = 80; 
+
         function updateTimer() {
             const now = new Date().getTime();
             const diff = now - startDate;
+
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
             const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
             const totalMinutes = diff / (1000 * 60);
             const totalBeats = Math.floor(totalMinutes * bpm);
+
             const d = String(days).padStart(2, '0');
             const h = String(hours).padStart(2, '0');
             const m = String(minutes).padStart(2, '0');
             const s = String(seconds).padStart(2, '0');
+
             const formattedBeats = new Intl.NumberFormat('tr-TR').format(totalBeats);
+
             document.getElementById("timer").innerHTML = `[ ${d} Gün | ${h} Saat | ${m} Dakika | ${s} Saniye ]`;
             document.getElementById("pulseCounter").innerHTML = `[ Toplam ${formattedBeats} Nabız Atışı ]`;
         }
+
         setInterval(updateTimer, 1000);
         updateTimer(); 
-        setTimeout(() => {
-            document.getElementById("footerText").classList.add("visible");
-        }, 5000);
     </script>
 </body>
 </html>
